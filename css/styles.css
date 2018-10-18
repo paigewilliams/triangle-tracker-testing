@@ -1,0 +1,21 @@
+.top .input-top {
+  width: 60px;
+  margin: auto;
+}
+
+
+.middle {
+  margin: auto;
+  width: 800px;
+  text-align: center;
+}
+
+.middle .input-box {
+  display: inline-block;
+  width: 60px;
+}
+
+.middle .input-img {
+  display: inline-block;
+  width: 550px;
+}
