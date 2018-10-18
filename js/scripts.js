@@ -4,20 +4,33 @@ $(function() {
     var sideB = parseInt($("#side-b").val());
     var sideC = parseInt($("#side-c").val());
     var triangleStatus;
+    var triangleImage;
 
-    if (isTrianle(sideA,sideB,sideC)) {
-      if (scalene(sideA,sideB,sideC)){
-        triangleStatus ="Scalene";
-      }
-      if (isosceles(sideA,sideB,sideC)) {
-        triangleStatus = "Isosceles";
-      }
-      if (equilateral(sideA,sideB,sideC)) {
-        triangleStatus = "Equilateral";
-      }
-    } else {triangleStatus = "Not a triangle"}
+    if (sideA && sideB && sideC) {
+      if (isTrianle(sideA,sideB,sideC)) {
+        if (scalene(sideA,sideB,sideC)){
+          triangleStatus ="Scalene";
+          triangleImage = "imgs/scalene.png"
+        }
+        if (isosceles(sideA,sideB,sideC)) {
+          triangleStatus = "Isosceles";
+          triangleImage = "imgs/isoceles.png"
 
-    console.log(triangleStatus)
+        }
+        if (equilateral(sideA,sideB,sideC)) {
+          triangleStatus = "Equilateral";
+          triangleImage = "imgs/equilateral.png"
+
+        }
+      } else {
+        triangleStatus = "Not a triangle"
+        triangleImage = "imgs/notatriangle.png"
+
+      }
+      $("#triangle-image").attr("src",triangleImage);
+
+    } else {alert("Side missing")}
+
 
   })
 

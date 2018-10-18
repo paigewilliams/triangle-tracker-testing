@@ -1,11 +1,11 @@
-.top .input-top {
+.input-top {
   width: 60px;
-  margin: auto;
+  margin: 30px auto;
 }
 
 
 .middle {
-  margin: auto;
+  margin: 30px auto;
   width: 800px;
   text-align: center;
 }
@@ -19,3 +19,12 @@
   display: inline-block;
   width: 550px;
 }
+
+#bottom {
+  width: 100px;
+  margin: auto;
+  margin-top: 20px;
+}
+/* #calculate {
+  margin: auto;
+} */
