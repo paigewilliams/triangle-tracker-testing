@@ -6,6 +6,16 @@ $(function() {
     var triangleStatus;
     var triangleImage;
 
+    $("input").change(function(){
+      if ($(this).val()) {
+        console.log($(this).val())
+        $(this).removeClass("is-invalid")
+      }
+      $(this).removeClass("is-invalid");
+    })
+
+
+
     if (sideA && sideB && sideC) {
       if (isTrianle(sideA,sideB,sideC)) {
         if (scalene(sideA,sideB,sideC)){
@@ -29,7 +39,13 @@ $(function() {
       }
       $("#triangle-image").attr("src",triangleImage);
 
-    } else {alert("Side missing")}
+    } else {
+      $("input").each(function() {
+        $(this).addClass("is-invalid");
+      })
+      // alert("Side missing")
+
+    }
 
 
   })
